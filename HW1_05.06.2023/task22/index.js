@@ -6,6 +6,19 @@ import { calculateCirclePerimeter } from "./formulas.js";
 import { calculateCircleArea } from "./formulas.js";
 import { calculateTrapezoidPerimeter } from "./formulas.js";
 import { calculateTrapezoidArea } from "./formulas.js";
+/*
+Лучше всё одним импортом делать:
+import { calculateTrianglePerimeter,
+         calculateTriangleArea,
+         calculateCirclePerimeter,
+         calculateCircleArea,
+         calculateTrapezoidPerimeter,
+         calculateTrapezoidArea } from "./formulas.js";
+
+Или так:
+import * as formula from "./formulas.js";
+и тогда вызовы будет такие: formula.calculateTrianglePerimeter(a,b,c);
+*/
 
 let a = 5;
 let b = 4;
