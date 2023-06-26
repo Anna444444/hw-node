@@ -1,0 +1,17 @@
+{
+  "name": "14.06.2023bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "node-fetch": "^3.3.1",
+    "node-telegram-bot-api": "^0.61.0"
+  }
+}
