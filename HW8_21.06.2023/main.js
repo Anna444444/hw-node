@@ -33,56 +33,6 @@ function worker(request, response) {
             }
             break;
 
-            // case "/users":
-            if (request.method === "GET") {
-                let name = params.get("name");
-                if (name) {
-                    let usersData = JSON.parse(fs.readFileSync("./users.json", "utf-8"));
-                    let userExists = usersData.find((user) => user.name === name);
-                    if (userExists) {
-                        data = fs.readFileSync("./users.html", "utf-8");
-                        data = data.replace("%name%", name);
-                        response.statusCode = 200;
-                        response.setHeader("Content-Type", "text/html");
-                        response.write(data);
-                        response.end();
-                        return;
-                    } else {
-                        response.statusCode = 404;
-                        response.statusMessage = "User not found";
-                        response.end();
-                        return;
-                    }
-                } else {
-                    response.statusCode = 403;
-                    response.statusMessage = "name is not specified";
-                    response.end();
-                    return;
-                }
-            } else if (request.method === "POST") {
-                let body = [];
-                request.on("data", (chunk) => {
-                    body.push(chunk);
-                }).on("end", () => {
-                    body = Buffer.concat(body).toString();
-                    let userData = querystring.parse(body);
-                    let users = JSON.parse(fs.readFileSync("./users.json", "utf-8"));
-                    users.push(userData);
-                    fs.writeFileSync("./users.json", JSON.stringify(users), "utf-8");
-                    let redirectUrl = "/users?name=" + userData.name;
-                    response.statusCode = 302;
-                    response.setHeader("Location", redirectUrl);
-                    response.end();
-                    return;
-                });
-            } else {
-                response.statusCode = 403;
-                response.statusMessage = "Invalid request method";
-                response.end();
-                return;
-            }
-            break;
-
         case "/users":
             if (request.method === "GET") {
                 let name = params.get("name");
