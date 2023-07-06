@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm run changelog",
+  "dist": {
+    "baseDir": "./"
+  },
+  "npm": {
+    "publish": true
+  }
+}
