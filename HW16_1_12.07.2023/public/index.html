@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="btns">
+        <button id="incr">INCREMENT</button>
+        <button id="decr">DECREMENT</button>
+        <button id="clear">CLEAR</button>
+    </div>
+
+    <div class="nums">
+        <div class="number">0</div>
+    </div>
+
+    <div class="items">
+        <ul id="item-list"></ul>
+    </div>
+
+    <div class="form">
+        <form id="add-form">
+            <input type="text" id="item-input" placeholder="Введите текст" />
+            <button type="submit" id="add-button">Добавить</button>
+        </form>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.1/socket.io.min.js"
+        integrity="sha512-+NaO7d6gQ1YPxvc/qHIqZEchjGm207SszoNeMgppoqD/67fEqmc1edS8zrbxPD+4RQI3gDgT/83ihpFW61TG/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer type="module" src="index.js"></script>
+</body>
+</html>
