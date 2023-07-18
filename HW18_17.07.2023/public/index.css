@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(14, 51, 85);
+}
+
+.formatter {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: rgb(178, 213, 213);
+    border-radius: 5px;
+}
+
+#main-area {
+    border: 2px solid black;
+    width: 75%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: rgb(178, 213, 213);
+    padding: 10px;
+    height: 250px;
+}
+
+#save,
+#open {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(178, 213, 213);
+}
